@@ -22,7 +22,11 @@
     <script src="<?=base_url()?>assets/template/dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
-    
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.groupedlayercontrol.css" /> 
+    <script src="<?=base_url()?>assets/leaflet.groupedlayercontrol.js"></script>
+
 </head>
