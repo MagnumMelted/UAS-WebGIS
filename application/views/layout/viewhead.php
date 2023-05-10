@@ -29,4 +29,7 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/leaflet.groupedlayercontrol.css" /> 
     <script src="<?=base_url()?>assets/leaflet.groupedlayercontrol.js"></script>
 
+    <link rel="stylesheet" href="<?=base_url()?>assets/Control.MiniMap.css" /> 
+    <script src="<?=base_url()?>assets/Control.MiniMap.js"></script>
+
 </head>
