@@ -75,5 +75,12 @@ labelTemplateLng:"Longitude: {x}"
 /* scale */
 L.control.scale({metric: true, position: "bottomleft"}).addTo(map);
 
+var north = L.control({position: "bottomleft"}); 
+north.onAdd = function(map) { 
+var div = L.DomUtil.create("div", "info legend"); 
+div.innerHTML = '<img src="<?=base_url()?>assets/arah-mata-angin.png"style=width:150px;>'; 
+return div; } 
+north.addTo(map);
+
 
 </script>
