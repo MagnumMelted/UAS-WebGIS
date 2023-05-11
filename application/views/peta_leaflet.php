@@ -65,4 +65,15 @@ var locateControl = L.control.locate({
 
 var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
 
+L.control.coordinates({ 
+position:"bottomleft", 
+decimals:2, 
+decimalSeperator:",", 
+labelTemplateLat:"Latitude: {y}", 
+labelTemplateLng:"Longitude: {x}" 
+}).addTo(map);
+/* scale */
+L.control.scale({metric: true, position: "bottomleft"}).addTo(map);
+
+
 </script>
