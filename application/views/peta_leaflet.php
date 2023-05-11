@@ -63,4 +63,6 @@ var locateControl = L.control.locate({
         } 
 }).addTo(map);
 
+var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
+
 </script>
