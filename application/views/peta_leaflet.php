@@ -20,9 +20,23 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_M
     maxZoom: 16
 });
 
+var GoogleMaps = new 
+L.TileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', { opacity: 1.0, 
+attribution: 'Latihan Web GIS' 
+});
+
+var GoogleRoads = new 
+L.TileLayer('https://mt1.google.com/vt/lyrs=h&x={x}&y={y}&z={z}',{ 
+opacity: 1.0, 
+attribution: 'Latihan Web GIS' 
+});
+
+
 var baseLayers = {
     'Google Satellite Hybrid': GoogleSatelliteHybrid,
-    'Esri NatGeo World Map': Esri_NatGeoWorldMap
+    'Esri NatGeo World Map': Esri_NatGeoWorldMap,
+    'Google Maps': GoogleMaps,
+    'Google Roads': GoogleRoads
 };
 var overlayLayers = {}
 L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
@@ -36,7 +50,7 @@ var miniMap = new L.Control.MiniMap(osm2, {toggleDisplay:
     true, position : "bottomright",
     aimingRectOptions : rect1, shadowRectOptions:
     rect2
-    }).addTo(map);
+}).addTo(map);
 
 L.Control.geocoder({position :"topleft", collapsed:true}).addTo(map);
 
