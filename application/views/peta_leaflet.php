@@ -2,7 +2,10 @@
     <div id="map" style="width: 100%; height: 530px; color: black; position: relative;"></div> 
 </div>
 <script> 
-    var map = L.map('map', { 
+
+var prov = new L.LayerGroup();
+
+var map = L.map('map', { 
     center: [-1.7912604466772375, 116.42311966554416], 
     zoom: 5,
     zoomControl: false,
@@ -38,8 +41,12 @@ var baseLayers = {
     'Google Maps': GoogleMaps,
     'Google Roads': GoogleRoads
 };
-var overlayLayers = {}
-L.control.layers(baseLayers, overlayLayers, {collapsed: true}).addTo(map);
+
+var groupedOverlays = {
+    "Peta Dasar":{'Ibu Kota Provinsi': prov} 
+};
+
+L.control.groupedLayers(baseLayers, groupedOverlays).addTo(map);
 
 var osmUrl='https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 var osmAttrib='Map data &copy; OpenStreetMap contributors';
@@ -105,5 +112,18 @@ div.innerHTML = '<img src="<?=base_url()?>assets/arah-mata-angin.png"style=width
 return div; } 
 north.addTo(map);
 
+$.getJSON("<?=base_url()?>assets/provinsi.geojson",function(data){ 
+                var ratIcon = L.icon({ 
+                    iconUrl: '<?=base_url()?>assets/Marker-1.png', 
+                    iconSize: [12,10] 
+                }); 
+                L.geoJson(data,{ 
+                    pointToLayer: function(feature,latlng){ 
+                    var marker = L.marker(latlng,{icon: ratIcon}); 
+                    marker.bindPopup(feature.properties.CITY_NAME); 
+                    return marker; 
+                    } 
+                }).addTo(prov); 
+    });
 
 </script>
