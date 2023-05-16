@@ -7,6 +7,8 @@ var prov = new L.LayerGroup();
 var rsu = new L.LayerGroup();
 var puskesmas = new L.LayerGroup();
 var poliklinik = new L.LayerGroup();
+var sungai = new L.LayerGroup();
+var provin = new L.LayerGroup();
 
 
 var map = L.map('map', { 
@@ -49,7 +51,9 @@ var baseLayers = {
 
 var groupedOverlays = {
     "Peta Dasar":{
-        'Ibu Kota Provinsi': prov
+        'Ibu Kota Provinsi': prov,
+        'Jaringan Sungai': sungai,
+        'Provinsi': provin
     },
     "Peta Khusus":{
         'Rumah Sakit Umum': rsu,
@@ -108,11 +112,11 @@ var locateControl = L.control.locate({
 var zoom_bar = new L.Control.ZoomBar({position: 'topleft'}).addTo(map);
 
 L.control.coordinates({ 
-position:"bottomleft", 
-decimals:2, 
-decimalSeperator:",", 
-labelTemplateLat:"Latitude: {y}", 
-labelTemplateLng:"Longitude: {x}" 
+    position:"bottomleft", 
+    decimals:2, 
+    decimalSeperator:",", 
+    labelTemplateLat:"Latitude: {y}", 
+    labelTemplateLng:"Longitude: {x}" 
 }).addTo(map);
 /* scale */
 L.control.scale({metric: true, position: "bottomleft"}).addTo(map);
@@ -179,6 +183,59 @@ $.getJSON("<?=base_url()?>assets/poliklinik.geojson",function(data){
                     } 
                 }).addTo(poliklinik); 
 });
+
+$.getJSON("<?=base_url()?>/assets/sungai.geojson",function(kode){ 
+                L.geoJson( kode, { 
+                style: function(feature){ 
+                    var color, 
+                    kode = feature.properties.kode; 
+                    if ( kode < 2 ) color = "#f2051d"; 
+                    else if ( kode > 0 ) color = "#f2051d"; 
+                    else color = "#f2051d"; // no data 
+                    return { color: "#999", weight: 5, color: color, fillOpacity: .8 }; 
+                }, 
+                onEachFeature: function( feature, layer ){ 
+                    layer.bindPopup 
+                    () 
+                } 
+            }).addTo(sungai); 
+});
+
+$.getJSON("<?=base_url()?>/assets/provinsi_polygon.geojson", function(kode){
+                L.geoJson( kode, {
+                    style: function(feature){
+                    var fillColor,
+                    kode = feature.properties.kode;
+                    if ( kode > 21 ) fillColor ="#006837"; 
+                    else if (kode>20) fillColor="#fec44f"
+                    else if (kode>19) fillColor="#c2e699"
+                    else if (kode>18) fillColor="#fee0d2"
+                    else if (kode>17) fillColor="#756bb1"
+                    else if (kode>16) fillColor="#8c510a"
+                    else if (kode>15) fillColor="#01665e"
+                    else if (kode>14) fillColor="#e41a1c"
+                    else if (kode>13) fillColor="#636363"
+                    else if (kode>12) fillColor= "#762a83"
+                    else if (kode>11) fillColor="#1b7837"
+                    else if (kode>10) fillColor="#d53e4f"
+                    else if (kode>9) fillColor="#67001f"
+                    else if (kode>8) fillColor="#c994c7"
+                    else if (kode>7) fillColor="#fdbb84"
+                    else if (kode>6) fillColor="#dd1c77"
+                    else if (kode>5) fillColor="#3182bd"
+                    else if ( kode > 4 ) fillColor ="#f03b20"
+                    else if ( kode > 3 ) fillColor = "#31a354";
+                    else if ( kode > 2 ) fillColor = "#78c679";
+                    else if ( kode > 1 ) fillColor = "#c2e699";
+                    else if ( kode > 0 ) fillColor = "#ffffcc";
+                    else fillColor = "#f7f7f7"; // no data
+                    return { color: "#999", weight: 1, fillColor: fillColor, fillOpacity: .6 };
+                },
+                onEachFeature: function( feature, layer ){
+                layer.bindPopup(feature.properties.PROV)
+                }
+            }).addTo(provin);
+        });
 
 
 </script>
