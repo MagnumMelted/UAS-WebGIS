@@ -13,25 +13,7 @@
 rel="stylesheet">
 </head>
  <div class="collapse navbar-collapse order-3" id="navbarCollapse">
- <!-- Left navbar links -->
- <ul class="navbar-nav">
- <li class="nav-item">
- <a href="#" style= "color:white" class="nav-link">Home</a>
- </li>
- <li class="nav-item">
- <a href="#" style= "color:white" class="nav-link">Map</a>
- </li>
- <li class="nav-item dropdown">
- <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style= "color:white" class="nav-link dropdown-toggle">Download</a>
- <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
- <li><a href="<?=base_url()?>assets/images.zip" class="dropdown-item">images.zip</a></li> 
- <li><a href="<?=base_url()?>assets/images2.zip"class="dropdown-item">images2.zip</a></li> 
- <li><a href="<?=base_url()?>assets/images3.zip"class="dropdown-item">images3.zip</a></li>
- <li class="dropdown-divider"></li>
- <!-- End Level two -->
- </ul>
- </li>
- </ul>
+ 
  <!-- SEARCH FORM -->
  </div>
  </nav>

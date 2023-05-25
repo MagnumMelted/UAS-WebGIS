@@ -1,5 +1,5 @@
 <div class="content"> 
-    <div id="map" style="width: 100%; height: 530px; color: black; position: relative;"></div> 
+    <div id="map" style="width: 100%; height: 650px; color: black; position: relative;"></div> 
 </div>
 <script> 
 
