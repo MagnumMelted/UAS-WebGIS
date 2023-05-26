@@ -6,7 +6,7 @@
    <!-- Mobile Metas -->
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    <!-- Site Metas -->
-   <title>Induko</title>
+   <title>WebGIS Ortega</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -57,6 +57,9 @@
                                  <li class="nav-item active">
                                     <a class="nav-link" href="index.html">Home</a>
                                  </li>
+                                 <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Map</a>
+                                 </li>
                                  <li class="nav-item">
                                     <a class="nav-link color-aqua-hover" href="about.html">About</a>
                                  </li>
@@ -67,7 +70,7 @@
                                     <a class="nav-link color-grey-hover" href="time.html">Time</a>
                                  </li>
                                  <li class="nav-item">
-                                    <a class="nav-link color-grey-hover" href="contact.html">Contact Us</a>
+                                    <a class="nav-link color-grey-hover" href="contact.html">Contact</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link color-grey-hover" href="contact.html">Login</a>
@@ -96,11 +99,15 @@
           <div class="row">
              <div class="full">
                   <div class="slider_banner">
-                    <img class="img-responsive" src="<?=base_url()?>assets/web/images/slider_img.png" alt="#" />
+                    <img class="img-responsive" src="<?=base_url()?>assets/web/images/slider_img.jpg" alt="#"/>
                       <div class="slide_cont">
                         <div class="slider_cont_inner">
-                          <h3>Welcome To Our  Web Coaching</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit</p>
+                          <h3 style=
+                          "line-height: 1.2;
+                           color: white">Selamat Datang di WebGIS Ortega</h3>
+                        <p style="font-weight: bold">
+                           Eksplorasi hal-hal mengenai pemetaan, mulai dari Fasilitas Kesehatan hingga Fasilitas Umum!
+                        </p>
                         <a class="blue_bt" href="#">Read More</a>
                         </div>
                       </div>
@@ -110,7 +117,24 @@
         </div>
       </section>
       <!-- end section -->
-    
+
+     <!-- Map section -->
+     <div id="important" class="important">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 text_align_center">
+                  <div class="titlepage" style="margin-top: 50px;">
+                     <h2>WebGIS Rafli Ortega Jaya</h2>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="important_bg">
+            <!-- memangil web -->
+            <iframe src="<?=base_url()?>/home" width="100%" height="1080" margin="auto"></iframe>
+         </div>
+      </div>
+
      <!-- about section -->
       <section class="layout_padding section about_dottat">
          <div class="container">
