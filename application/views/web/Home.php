@@ -13,23 +13,22 @@
    <!-- site icon -->
    <link rel="icon" href="images/fevicon.png" type="image/png" />
    <!-- Bootstrap core CSS -->
-   <link href="css/bootstrap.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/css/bootstrap.css" rel="stylesheet">
    <!-- FontAwesome Icons core CSS -->
-   <link href="css/font-awesome.min.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/css/font-awesome.min.css" rel="stylesheet">
    <!-- Custom animate styles for this template -->
-   <link href="css/animate.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/css/animate.css" rel="stylesheet">
    <!-- Custom styles for this template -->
-   <link href="style.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/style.css" rel="stylesheet">
    <!-- Responsive styles for this template -->
-   <link href="css/responsive.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/css/responsive.css" rel="stylesheet">
    <!-- Colors for this template -->
-   <link href="css/colors.css" rel="stylesheet">
+   <link href="<?=base_url()?>assets/web/css/colors.css" rel="stylesheet">
    <!-- light box gallery -->
-   <link href="css/ekko-lightbox.css" rel="stylesheet">
-   <!--[if lt IE 9]>
-   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-   <![endif]-->
+   <link href="<?=base_url()?>assets/web/css/ekko-lightbox.css" rel="stylesheet">
+   
+   
+   
    </head>
    <body id="home_page" class="home_page">
       <!-- header -->
@@ -41,7 +40,7 @@
                <div class="col-lg-3">
                   <div class="full">
                      <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        <a href="index.html"><img src="<?=base_url()?>assets/web/images/logo.png" alt="#" /></a>
                      </div>
                   </div>
                </div>
@@ -76,7 +75,7 @@
                               </ul>
                               <ul class="navbar-nav">
                                  <li class="nav-item">
-                                    <a class="nav-link" href="#"><img src="images/search_icon.png" alt="#" /></a>
+                                    <a class="nav-link" href="#"><img src="<?=base_url()?>assets/web/images/search_icon.png" alt="#" /></a>
                                  </li>
                               </ul>
                            </div>
@@ -97,7 +96,7 @@
           <div class="row">
              <div class="full">
                   <div class="slider_banner">
-                    <img class="img-responsive" src="images/slider_img.png" alt="#" />
+                    <img class="img-responsive" src="<?=base_url()?>assets/web/images/slider_img.png" alt="#" />
                       <div class="slide_cont">
                         <div class="slider_cont_inner">
                           <h3>Welcome To Our  Web Coaching</h3>
@@ -126,7 +125,7 @@
                </div>
                <div class="col-md-12">
                   <div class="about_img margin_top_30  text_align_center">
-                     <img src="images/ab_img.png" alt="#" />
+                     <img src="<?=base_url()?>assets/web/images/ab_img.png" alt="#" />
                   </div>
                </div>
             </div>
@@ -151,7 +150,7 @@
 
               <div class="col-md-4 text_align_center">
                  <div class="cours">
-                   <img class="img-responsive" src="images/cour1.png" alt="#" />
+                   <img class="img-responsive" src="<?=base_url()?>assets/web/images/cour1.png" alt="#" />
                  </div>
                  <h3>Design</h3>
                  <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re</p>
@@ -159,7 +158,7 @@
 
               <div class="col-md-4 text_align_center">
                  <div class="cours">
-                   <img class="img-responsive" src="images/cour2.png" alt="#" />
+                   <img class="img-responsive" src="<?=base_url()?>assets/web/images/cour2.png" alt="#" />
                  </div>
                  <h3>Coding</h3>
                  <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re</p>
@@ -167,7 +166,7 @@
 
               <div class="col-md-4 text_align_center">
                  <div class="cours">
-                   <img class="img-responsive" src="images/cour3.png" alt="#" />
+                   <img class="img-responsive" src="<?=base_url()?>assets/web/images/cour3.png" alt="#" />
                  </div>
                  <h3>Javascript</h3>
                  <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in re</p>
@@ -228,7 +227,7 @@
                </div>
                <div class="col-md-12 testimonial">
                   <div class="full text_align_center">
-                     <img src="images/testimon.png" alt="#" />
+                     <img src="<?=base_url()?>assets/web/images/testimon.png" alt="#" />
                      <h3><span class="theme_color_text">koluda</span><br><small>Student</small></h3>
                   </div>
                   <div class="full margin_top_30 text_align_center">
@@ -346,12 +345,12 @@
       <!-- end footer -->
       <!-- Core JavaScript
          ================================================== -->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/tether.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/parallax.js"></script>
-      <script src="js/animate.js"></script>
-      <script src="js/ekko-lightbox.js"></script>
-      <script src="js/custom.js"></script>
+      <script src="<?=base_url()?>assets/web/js/jquery.min.js"></script>
+      <script src="<?=base_url()?>assets/web/js/tether.min.js"></script>
+      <script src="<?=base_url()?>assets/web/js/bootstrap.min.js"></script>
+      <script src="<?=base_url()?>assets/web/js/parallax.js"></script>
+      <script src="<?=base_url()?>assets/web/js/animate.js"></script>
+      <script src="<?=base_url()?>assets/web/js/ekko-lightbox.js"></script>
+      <script src="<?=base_url()?>assets/web/js/custom.js"></script>
    </body>
 </html>
