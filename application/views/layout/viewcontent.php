@@ -1,4 +1,4 @@
-<?php 
-if ($content) { 
-$this->load->view($content); 
-}
+<?php
+    if ($content) { 
+    $this->load->view($content); 
+} 
